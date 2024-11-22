@@ -1,0 +1,8 @@
+resources:
+- manager.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: controller
+  newName: 192.168.31.199:11180/test-crd/guestbook-operator
+  newTag: v1.0.0
